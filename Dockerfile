@@ -4,7 +4,7 @@ LABEL maintainer Travis CI GmbH <support+travis-app-docker-images@travis-ci.com>
 
 RUN printf "deb http://security.debian.org/debian-security buster/updates main contrib non-free\ndeb http://deb.debian.org/debian buster main contrib non-free\ndeb http://deb.debian.org/debian buster-updates main contrib non-free" > /etc/apt/sources.list
 
-RUN apt-get update && apt-get upgrade -y --no-install-recommends && apt-get install -y postgresql postgresql-server-dev-9.4 liblocal-lib-perl build-essential
+RUN apt-get update && apt-get upgrade -y --no-install-recommends && apt-get install -y postgresql postgresql-server-dev-all liblocal-lib-perl build-essential
 
 # throw errors if Gemfile has been modified since Gemfile.lock
 RUN bundle config --global frozen 1
